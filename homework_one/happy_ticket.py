@@ -8,3 +8,12 @@
 # 385916 -> yes
 # 123456 -> no
 
+number_of_ticket = input('Введите номер билета: ')
+
+sum_left_numbers = int(number_of_ticket[0: -5]) + int(number_of_ticket[1: -4]) + int(number_of_ticket[2: -3])
+sum_right_numbers = int(number_of_ticket[3: -2]) + int(number_of_ticket[4: -1]) + int(number_of_ticket[5:])
+
+if sum_left_numbers == sum_right_numbers:
+    print(f'Поздравляем билет № {number_of_ticket} - счастливый')
+else:
+    print(f'В этот раз БОЛТ')
