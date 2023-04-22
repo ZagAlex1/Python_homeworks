@@ -12,8 +12,8 @@
 #     12
 
 my_word = input("Введите слово для, вычисления его стоимости: ")
-my_word_one = my_word.upper()
-print(my_word)
+word_upper = my_word.upper()
+print(word_upper)
 
 amount_of_cost = 0
 
@@ -41,23 +41,17 @@ my_dict_english_list = [{1: my_english_one}, {2: my_english_two}, {3: my_english
 
 for item in my_dict_russian_list:
     for value in item.values():
-        for letter in value:
-            if letter in my_word_one:
+        for word_item in word_upper:
+            if word_item in value:
                 amount_of_cost += sum(item.keys())
+
 
 for item in my_dict_english_list:
     for value in item.values():
-        for letter in value:
-            if letter in my_word_one:
+        for word_item in word_upper:
+            if word_item in value:
                 amount_of_cost += sum(item.keys())
 
 print(amount_of_cost)
 
-# def count_letters(dict, word, cost):
-#     for item in dict:
-#         for value in item.values():
-#             for letter in value:
-#                 if letter in word:
-#                     cost += sum(item.keys())
-#     return cost
-# print(count_letters(my_dict_russian_list, my_word_one, amount_of_cost))
+
